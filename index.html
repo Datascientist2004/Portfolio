@@ -157,6 +157,13 @@ h2.sh{font-family:var(--fd);font-size:clamp(1.9rem,3.8vw,2.9rem);font-weight:800
 .sv-nm{font-family:var(--fd);font-weight:700;font-size:.98rem;margin-bottom:9px;position:relative;z-index:1}
 .sv-dc{color:var(--mut);font-size:.83rem;line-height:1.65;margin-bottom:14px;position:relative;z-index:1}
 .sv-pr{font-weight:700;font-size:.88rem;position:relative;z-index:1}
+.pr-old{text-decoration:line-through;color:var(--mut);font-weight:400;font-size:.76rem;margin-right:8px;opacity:.7}
+.pr-badge{display:inline-block;margin-left:9px;background:rgba(245,158,11,.15);color:var(--c4);border:1px solid rgba(245,158,11,.35);font-family:var(--fm);font-size:.58rem;letter-spacing:.4px;padding:2px 8px;border-radius:20px;vertical-align:middle;white-space:nowrap}
+.promo-banner{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(90deg,rgba(245,158,11,.14),rgba(236,72,153,.14));border:1px solid rgba(245,158,11,.4);padding:11px 22px;border-radius:30px;margin:6px 0 30px;font-size:.85rem;color:var(--txt);animation:promoPulse 2.4s ease-in-out infinite}
+.promo-banner strong{color:var(--c4)}
+.promo-code{font-family:var(--fm);background:rgba(245,158,11,.22);color:var(--c4);padding:3px 10px;border-radius:6px;font-weight:700;letter-spacing:.6px}
+@keyframes promoPulse{0%,100%{box-shadow:0 0 0 rgba(245,158,11,0)}50%{box-shadow:0 0 22px rgba(245,158,11,.25)}}
+@media(max-width:640px){.promo-banner{font-size:.76rem;padding:10px 16px;flex-wrap:wrap}}
 .p1{color:var(--c1)}.p2{color:var(--c2)}.p3{color:var(--c3)}.p4{color:var(--c4)}.p5{color:var(--c5)}
 .sv-tags{display:flex;flex-wrap:wrap;gap:4px;margin-top:10px;position:relative;z-index:1}
 .tg{font-family:var(--fm);font-size:.66rem;padding:2px 7px;border-radius:3px;background:rgba(99,102,241,.1);color:var(--c1);border:1px solid rgba(99,102,241,.18)}
@@ -536,14 +543,15 @@ footer{border-top:1px solid var(--brd);padding:26px 5%;display:flex;align-items:
   <div class="si">
     <div class="ey rv">// What I Offer</div>
     <h2 class="sh rv wtitle" data-split>Productized services. Fixed pricing. No surprises.</h2>
-    <p class="sd rv">Helping startups &amp; businesses build custom BI dashboards, automated pipelines, and predictive ML models — packaged, not hourly.</p>
+    <p class="sd rv">Helping startups &amp; businesses build custom BI dashboards, automated pipelines, and predictive ML models — packaged, not hourly. Priced to beat typical agency &amp; freelancer rates.</p>
+    <div class="promo-banner rv">🔥 <strong>Limited-Time Offer:</strong> Use code <span class="promo-code">HERO20</span> for a flat 20% off any package below.</div>
     <div class="sv-grid">
-      <div class="svc g1 rv" data-tilt data-glare><span class="sv-em">📊</span><div class="sv-nm">Executive BI &amp; Interactive Dashboards</div><div class="sv-dc">Transform raw Excel / SQL data into real-time interactive dashboards using Power BI or Tableau. Includes metric calculation, visual filters, auto-refresh pipelines, and executive summary views.</div><div class="sv-pr p1">₹15,000 – ₹25,000 / $200 – $350</div><div class="sv-tags"><span class="tg">Power BI</span><span class="tg">Tableau</span><span class="tg">DAX</span><span class="tg">SQL</span></div></div>
-      <div class="svc g3 rv d2" data-tilt data-glare><span class="sv-em">🤖</span><div class="sv-nm">Predictive Analytics &amp; ML Integration</div><div class="sv-dc">Custom Machine Learning models — customer churn, sales forecasting, lead scoring — built with Python &amp; Scikit-learn on your real business data, with clean documentation.</div><div class="sv-pr p3">₹25,000 – ₹45,000 / $350 – $600</div><div class="sv-tags"><span class="tg">Python</span><span class="tg">Scikit-learn</span><span class="tg">Deep Learning</span></div></div>
-      <div class="svc g2 rv d4" data-tilt data-glare><span class="sv-em">⚡</span><div class="sv-nm">Web Scraping &amp; Data Extraction</div><div class="sv-dc">Automated Python scrapers to extract structured market, pricing, or competitor data into clean CSV, JSON, or Google Sheets — refreshed on your schedule.</div><div class="sv-pr p2">₹12,000 – ₹20,000 / $150 – $250</div><div class="sv-tags"><span class="tg">Python</span><span class="tg">Web Scraping</span><span class="tg">Automation</span></div></div>
-      <div class="svc g6 rv" data-tilt data-glare><span class="sv-em">🔄</span><div class="sv-nm">Monthly Data &amp; Analytics Retainer</div><div class="sv-dc">Dedicated ongoing support for dashboard maintenance, bug fixes, query optimization, and weekly custom analytics reporting for your business.</div><div class="sv-pr p1">₹25,000 / month</div><div class="sv-tags"><span class="tg">Retainer</span><span class="tg">Support</span><span class="tg">Reporting</span></div></div>
-      <div class="svc g4 rv d2" data-tilt data-glare><span class="sv-em">🌐</span><div class="sv-nm">Full Stack Web &amp; AI App Development</div><div class="sv-dc">React + Node.js apps, AI-powered products, admin panels — responsive, fast, production-ready. I designed &amp; shipped FitFuel AI Guru this way, end-to-end.</div><div class="sv-pr p4">From ₹20,000 / $250</div><div class="sv-tags"><span class="tg">React</span><span class="tg">Node.js</span><span class="tg">AI Integration</span></div></div>
-      <div class="svc g5 rv d4" data-tilt data-glare><span class="sv-em">🎨</span><div class="sv-nm">UI/UX Design</div><div class="sv-dc">Figma wireframes, user flows, high-fidelity prototypes and design systems built for how real users think and interact.</div><div class="sv-pr p5">From ₹8,000 / $100</div><div class="sv-tags"><span class="tg">Figma</span><span class="tg">UX Research</span><span class="tg">Prototyping</span></div></div>
+      <div class="svc g1 rv" data-tilt data-glare><span class="sv-em">📊</span><div class="sv-nm">Executive BI &amp; Interactive Dashboards</div><div class="sv-dc">Transform raw Excel / SQL data into real-time interactive dashboards using Power BI or Tableau. Includes metric calculation, visual filters, auto-refresh pipelines, and executive summary views.</div><div class="sv-pr p1"><span class="pr-old">₹12,000 – ₹25,000</span>₹9,600 – ₹20,000<span class="pr-badge">20% OFF · HERO20</span></div><div class="sv-tags"><span class="tg">Power BI</span><span class="tg">Tableau</span><span class="tg">DAX</span><span class="tg">SQL</span></div></div>
+      <div class="svc g3 rv d2" data-tilt data-glare><span class="sv-em">🤖</span><div class="sv-nm">Predictive Analytics &amp; ML Integration</div><div class="sv-dc">Custom Machine Learning models — customer churn, sales forecasting, lead scoring — built with Python &amp; Scikit-learn on your real business data, with clean documentation.</div><div class="sv-pr p3"><span class="pr-old">₹22,000 – ₹42,000</span>₹17,600 – ₹33,600<span class="pr-badge">20% OFF · HERO20</span></div><div class="sv-tags"><span class="tg">Python</span><span class="tg">Scikit-learn</span><span class="tg">Deep Learning</span></div></div>
+      <div class="svc g2 rv d4" data-tilt data-glare><span class="sv-em">⚡</span><div class="sv-nm">Web Scraping &amp; Data Extraction</div><div class="sv-dc">Automated Python scrapers to extract structured market, pricing, or competitor data into clean CSV, JSON, or Google Sheets — refreshed on your schedule.</div><div class="sv-pr p2"><span class="pr-old">₹10,000 – ₹18,000</span>₹8,000 – ₹14,400<span class="pr-badge">20% OFF · HERO20</span></div><div class="sv-tags"><span class="tg">Python</span><span class="tg">Web Scraping</span><span class="tg">Automation</span></div></div>
+      <div class="svc g6 rv" data-tilt data-glare><span class="sv-em">🔄</span><div class="sv-nm">Monthly Data &amp; Analytics Retainer</div><div class="sv-dc">Dedicated ongoing support for dashboard maintenance, bug fixes, query optimization, and weekly custom analytics reporting for your business.</div><div class="sv-pr p1"><span class="pr-old">₹20,000 / month</span>₹16,000 / month<span class="pr-badge">20% OFF · HERO20</span></div><div class="sv-tags"><span class="tg">Retainer</span><span class="tg">Support</span><span class="tg">Reporting</span></div></div>
+      <div class="svc g4 rv d2" data-tilt data-glare><span class="sv-em">🌐</span><div class="sv-nm">Full Stack Web &amp; AI App Development</div><div class="sv-dc">React + Node.js apps, AI-powered products, admin panels — responsive, fast, production-ready. I designed &amp; shipped FitFuel AI Guru this way, end-to-end.</div><div class="sv-pr p4"><span class="pr-old">From ₹18,000</span>From ₹14,400<span class="pr-badge">20% OFF · HERO20</span></div><div class="sv-tags"><span class="tg">React</span><span class="tg">Node.js</span><span class="tg">AI Integration</span></div></div>
+      <div class="svc g5 rv d4" data-tilt data-glare><span class="sv-em">🎨</span><div class="sv-nm">UI/UX Design</div><div class="sv-dc">Figma wireframes, user flows, high-fidelity prototypes and design systems built for how real users think and interact.</div><div class="sv-pr p5"><span class="pr-old">From ₹7,000</span>From ₹5,600<span class="pr-badge">20% OFF · HERO20</span></div><div class="sv-tags"><span class="tg">Figma</span><span class="tg">UX Research</span><span class="tg">Prototyping</span></div></div>
     </div>
   </div>
 </section>
@@ -554,22 +562,22 @@ footer{border-top:1px solid var(--brd);padding:26px 5%;display:flex;align-items:
   <div class="si">
     <div class="ey rv">// Instant Estimate</div>
     <h2 class="sh rv wtitle" data-split>Get your price in seconds.</h2>
-    <p class="sd rv">Tap what you need. See a real starting estimate instantly — no waiting for a reply.</p>
+    <p class="sd rv">Tap what you need. See a real starting estimate instantly — HERO20 discount already applied.</p>
     <div class="qc-wrap rv">
       <div class="qc-grid" id="qcGrid">
-        <label class="qc-chip" data-price="1200" data-name="BI Dashboard (Power BI/Tableau)"><input type="checkbox"/><span class="qc-check">✓</span><span class="qc-nm">📊 BI Dashboard</span><span class="qc-pr">₹1,200+</span></label>
-        <label class="qc-chip" data-price="800" data-name="Excel & MIS Automation"><input type="checkbox"/><span class="qc-check">✓</span><span class="qc-nm">⚡ Excel Automation</span><span class="qc-pr">₹800+</span></label>
-        <label class="qc-chip" data-price="3500" data-name="ML & Deep Learning Model"><input type="checkbox"/><span class="qc-check">✓</span><span class="qc-nm">🤖 ML / Deep Learning</span><span class="qc-pr">₹3,500+</span></label>
-        <label class="qc-chip" data-price="5000" data-name="Full Stack Web App"><input type="checkbox"/><span class="qc-check">✓</span><span class="qc-nm">🌐 Full Stack Web App</span><span class="qc-pr">₹5,000+</span></label>
-        <label class="qc-chip" data-price="2000" data-name="UI/UX Design"><input type="checkbox"/><span class="qc-check">✓</span><span class="qc-nm">🎨 UI/UX Design</span><span class="qc-pr">₹2,000+</span></label>
-        <label class="qc-chip" data-price="4000" data-name="AI Chatbot"><input type="checkbox"/><span class="qc-check">✓</span><span class="qc-nm">🤖 AI Chatbot</span><span class="qc-pr">₹4,000+</span></label>
+        <label class="qc-chip" data-price="9600" data-name="BI Dashboard (Power BI/Tableau)"><input type="checkbox"/><span class="qc-check">✓</span><span class="qc-nm">📊 BI Dashboard</span><span class="qc-pr">₹9,600+</span></label>
+        <label class="qc-chip" data-price="4000" data-name="Excel & MIS Automation"><input type="checkbox"/><span class="qc-check">✓</span><span class="qc-nm">⚡ Excel Automation</span><span class="qc-pr">₹4,000+</span></label>
+        <label class="qc-chip" data-price="17600" data-name="ML & Deep Learning Model"><input type="checkbox"/><span class="qc-check">✓</span><span class="qc-nm">🤖 ML / Deep Learning</span><span class="qc-pr">₹17,600+</span></label>
+        <label class="qc-chip" data-price="14400" data-name="Full Stack Web App"><input type="checkbox"/><span class="qc-check">✓</span><span class="qc-nm">🌐 Full Stack Web App</span><span class="qc-pr">₹14,400+</span></label>
+        <label class="qc-chip" data-price="5600" data-name="UI/UX Design"><input type="checkbox"/><span class="qc-check">✓</span><span class="qc-nm">🎨 UI/UX Design</span><span class="qc-pr">₹5,600+</span></label>
+        <label class="qc-chip" data-price="6400" data-name="AI Chatbot"><input type="checkbox"/><span class="qc-check">✓</span><span class="qc-nm">🤖 AI Chatbot</span><span class="qc-pr">₹6,400+</span></label>
       </div>
       <div class="qc-summary">
         <div class="qc-total-lbl">Estimated Starting Total</div>
         <div class="qc-total" id="qcTotal">₹0</div>
         <div class="qc-count" id="qcCount">Select a service to begin</div>
         <button class="qc-btn" id="qcSend" disabled>Send This Quote Request →</button>
-        <div class="qc-note">*Starting prices — final fixed quote confirmed after a free discovery call.</div>
+        <div class="qc-note">*Starting prices with code HERO20 (20% off, limited time) — final fixed quote confirmed after a free discovery call.</div>
       </div>
     </div>
   </div>
@@ -820,7 +828,7 @@ footer{border-top:1px solid var(--brd);padding:26px 5%;display:flex;align-items:
       </div>
       <div class="faq-item rv">
         <button class="faq-q">How does pricing work?<span class="faq-ic">+</span></button>
-        <div class="faq-a"><p>You get one fixed quote after a free discovery call — no hourly billing and no surprise costs. Use the Instant Quote tool above for a ballpark estimate first.</p></div>
+        <div class="faq-a"><p>You get one fixed quote after a free discovery call — no hourly billing and no surprise costs. Use the Instant Quote tool above for a ballpark estimate first. Use code <strong>HERO20</strong> for 20% off any package — limited-time offer.</p></div>
       </div>
       <div class="faq-item rv">
         <button class="faq-q">What do you need from me to start?<span class="faq-ic">+</span></button>
