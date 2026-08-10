@@ -7,6 +7,7 @@
 <meta name="description" content="Honey Chauhan — Data Analyst, ML Engineer, Full-Stack Developer & UI/UX Designer. Power BI dashboards, deep learning models, React/AI apps & chatbots — including FitFuel AI Guru, a shipped AI fitness app. 11 GitHub projects, 3 IBM certs. Get an instant quote."/>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -15,8 +16,8 @@
   --txt:#F1F5FF;--mut:#6B7499;--brd:rgba(99,102,241,.15);
   --fd:'Syne',sans-serif;--fb:'Inter',sans-serif;--fm:'JetBrains Mono',monospace;
 }
-html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--txt);font-family:var(--fb);overflow-x:hidden}
+html{scroll-behavior:smooth;overflow-x:hidden;max-width:100%}
+body{background:var(--bg);color:var(--txt);font-family:var(--fb);overflow-x:hidden;max-width:100vw;position:relative}
 ::-webkit-scrollbar{width:3px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:var(--c1);border-radius:2px}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}}
 
@@ -465,6 +466,21 @@ footer{border-top:1px solid var(--brd);padding:26px 5%;display:flex;align-items:
   #totop{right:16px;bottom:16px;width:42px;height:42px}
   .pr-grid{grid-template-columns:1fr!important}
   .prc-feature{grid-column:span 1!important;grid-row:span 1!important}
+
+  /* READABILITY: bigger, more spaced-out text on small screens */
+  body{font-size:16px}
+  .sh{font-size:clamp(1.6rem,7vw,2.2rem)!important;line-height:1.25!important}
+  .sd{font-size:.98rem;line-height:1.8;margin-bottom:36px}
+  .pdc{font-size:.86rem;line-height:1.75}
+  .rv p{line-height:1.8}
+  .ey{font-size:.68rem;letter-spacing:1.8px;margin-bottom:10px}
+  .si{padding:70px 6% 60px}
+  .svc,.prc,.skc,.pst{padding:26px 22px}
+  .tl-full{display:none}
+  .tl-short{display:inline!important}
+  .trust-line{font-size:.72rem;line-height:1.7;max-width:100%}
+  .htags{gap:8px;margin-top:16px}
+  .htag{font-size:.72rem;padding:6px 12px}
 }
 </style>
 </head>
@@ -510,7 +526,7 @@ footer{border-top:1px solid var(--brd);padding:26px 5%;display:flex;align-items:
         <a href="#contact" class="hb1" data-magnet data-ripple>Book a Free 15-Min Strategy Call</a>
         <a href="#services" class="hb2" data-ripple>Explore Services →</a>
       </div>
-      <p class="trust-line">⚡ Available for Freelance Projects &amp; Monthly Retainers · 24–48hr Turnaround on Consultations · 11 GitHub Projects · 1 Live AI Product Shipped</p>
+      <p class="trust-line"><span class="tl-full">⚡ Available for Freelance Projects &amp; Monthly Retainers · 24–48hr Turnaround on Consultations · 11 GitHub Projects · 1 Live AI Product Shipped</span><span class="tl-short" style="display:none">⚡ 24–48hr Turnaround · 11 GitHub Projects · 1 Live AI Product</span></p>
       <div class="htags">
         <span class="htag">Power BI</span><span class="htag">Python</span><span class="htag">SQL</span>
         <span class="htag">React</span><span class="htag">Deep Learning</span><span class="htag">Figma</span>
@@ -906,7 +922,7 @@ footer{border-top:1px solid var(--brd);padding:26px 5%;display:flex;align-items:
             <textarea class="fta" placeholder="Tell me about your project — data available, problem to solve, deadline..." id="fm" maxlength="500"></textarea>
             <span class="fcount" id="fCount">0/500</span>
           </div>
-          <button class="fsub" onclick="sendMsg(event)" data-ripple>Send Message ✉️</button>
+          <button class="fsub" id="fSubmit" onclick="sendMsg(event)" data-ripple>Send Message ✉️</button>
           <div class="fstatus" id="fStatus"></div>
         </div>
       </div>
@@ -985,6 +1001,20 @@ footer{border-top:1px solid var(--brd);padding:26px 5%;display:flex;align-items:
 <div id="mascotReopen" title="Bring back the guide">🙋</div>
 
 <script>
+/* ============ DATABASE CONFIG (Supabase) ============
+   HOW TO SET THIS UP (one-time, ~5 minutes):
+   1. Go to supabase.com → create a free project
+   2. In the SQL Editor, run the setup script from the README/instructions
+      you were given alongside this file (creates 'contacts' + 'feedback' tables)
+   3. Go to Project Settings → API → copy your "Project URL" and "anon public" key
+   4. Paste them below, replacing the two placeholder strings
+   5. Save, re-upload to GitHub — form submissions will now appear live in
+      your Supabase dashboard under Table Editor → contacts / feedback
+   Until you do this, forms safely fall back to opening your email app. */
+const SUPABASE_URL='YOUR_SUPABASE_URL_HERE';
+const SUPABASE_ANON_KEY='YOUR_SUPABASE_ANON_KEY_HERE';
+const dbClient=(SUPABASE_URL.startsWith('YOUR_')||typeof supabase==='undefined')?null:supabase.createClient(SUPABASE_URL,SUPABASE_ANON_KEY);
+
 /* ============ PRELOADER ============ */
 (function(){
   const fill=document.getElementById('plFill'),pct=document.getElementById('plPct'),pl=document.getElementById('preloader'),curtain=document.getElementById('curtain');
@@ -1518,16 +1548,32 @@ if(feEl)feEl.addEventListener('blur',()=>{
   if(!validEmail(feEl.value)){feEl.classList.add('invalid');feEl.classList.remove('valid');if(err)err.textContent='Enter a valid email'}
   else{feEl.classList.remove('invalid');feEl.classList.add('valid');if(err)err.textContent=''}
 });
-function sendMsg(e){
+async function sendMsg(e){
   if(e)e.preventDefault();
-  const n=fnEl?fnEl.value.trim():'',em=feEl?feEl.value.trim():'',s=document.getElementById('fs')?document.getElementById('fs').value:'',m=fmEl?fmEl.value:'';
+  const n=fnEl?fnEl.value.trim():'',em=feEl?feEl.value.trim():'',s=document.getElementById('fs')?document.getElementById('fs').value:'',m=fmEl?fmEl.value.trim():'';
   let ok=true;
   if(!n){fnEl.classList.add('invalid');document.getElementById('fnErr').textContent='Please enter your name';ok=false}
   if(!validEmail(em)){feEl.classList.add('invalid');document.getElementById('feErr').textContent='Enter a valid email';ok=false}
   if(!ok){if(fStatus){fStatus.style.color='var(--c3)';fStatus.textContent='Please fix the highlighted fields above.'}return}
-  if(fStatus){fStatus.style.color='var(--c5)';fStatus.textContent='Opening your email app... ✅'}
-  window.location.href='mailto:honeychauhan357@gmail.com?subject=Project Inquiry from '+encodeURIComponent(n)+'&body=Name: '+encodeURIComponent(n)+'%0AEmail: '+encodeURIComponent(em)+'%0AService: '+encodeURIComponent(s)+'%0A%0A'+encodeURIComponent(m);
-  setTimeout(()=>{if(fStatus)fStatus.textContent=''},5000);
+  const btn=document.getElementById('fSubmit');
+  if(btn){btn.disabled=true;btn.textContent='Sending...'}
+  if(dbClient){
+    try{
+      const{error}=await dbClient.from('contacts').insert([{name:n,email:em,service:s,message:m}]);
+      if(error)throw error;
+      if(fStatus){fStatus.style.color='var(--c5)';fStatus.textContent='Message received! I\'ll reply within 24 hours. ✅'}
+      if(fnEl)fnEl.value='';if(feEl)feEl.value='';if(fmEl){fmEl.value='';if(fCount)fCount.textContent='0/500'}
+      fnEl.classList.remove('valid');feEl.classList.remove('valid');
+    }catch(err){
+      if(fStatus){fStatus.style.color='var(--c3)';fStatus.textContent='Something went wrong — please try WhatsApp or email instead.'}
+      console.error('Supabase insert failed:',err);
+    }
+  }else{
+    if(fStatus){fStatus.style.color='var(--c5)';fStatus.textContent='Opening your email app... ✅'}
+    window.location.href='mailto:honeychauhan357@gmail.com?subject=Project Inquiry from '+encodeURIComponent(n)+'&body=Name: '+encodeURIComponent(n)+'%0AEmail: '+encodeURIComponent(em)+'%0AService: '+encodeURIComponent(s)+'%0A%0A'+encodeURIComponent(m);
+  }
+  if(btn){btn.disabled=false;btn.textContent='Send Message ✉️'}
+  setTimeout(()=>{if(fStatus)fStatus.textContent=''},6000);
 }
 
 /* ============ CLIENT FEEDBACK FORM ============ */
@@ -1547,7 +1593,7 @@ function sendMsg(e){
 
   const fbn=document.getElementById('fbn'),fbr=document.getElementById('fbr'),fbm=document.getElementById('fbm'),fbCount=document.getElementById('fbCount'),fbStatus=document.getElementById('fbStatus'),fbBtn=document.getElementById('fbSubmit');
   if(fbm)fbm.addEventListener('input',()=>{fbCount.textContent=fbm.value.length+'/500'});
-  fbBtn.addEventListener('click',()=>{
+  fbBtn.addEventListener('click',async()=>{
     const n=fbn.value.trim(),r=fbr.value.trim(),m=fbm.value.trim();
     let ok=true;
     const err=document.getElementById('fbnErr');
@@ -1556,10 +1602,25 @@ function sendMsg(e){
     if(!rating){fbStatus.style.color='var(--c3)';fbStatus.textContent='Please tap a star rating first.';ok=false}
     if(!m){fbm.classList.add('invalid');ok=false}else{fbm.classList.remove('invalid')}
     if(!ok){if(rating){fbStatus.style.color='var(--c3)';fbStatus.textContent='Please fix the highlighted fields above.'}return}
-    fbStatus.style.color='var(--c5)';fbStatus.textContent='Thank you! Opening your email app... ✅';
-    const stars='★'.repeat(rating)+'☆'.repeat(5-rating);
-    window.location.href='mailto:honeychauhan357@gmail.com?subject=Client Feedback ('+rating+'/5)&body=Name: '+encodeURIComponent(n)+'%0ACompany/Role: '+encodeURIComponent(r)+'%0ARating: '+encodeURIComponent(stars)+'%0A%0AFeedback:%0A'+encodeURIComponent(m);
-    setTimeout(()=>{fbStatus.textContent=''},5000);
+    fbBtn.disabled=true;fbBtn.textContent='Sending...';
+    if(dbClient){
+      try{
+        const{error}=await dbClient.from('feedback').insert([{name:n,role:r,rating:rating,message:m}]);
+        if(error)throw error;
+        fbStatus.style.color='var(--c5)';fbStatus.textContent='Thank you! Your feedback means a lot. ✅';
+        fbn.value='';fbr.value='';fbm.value='';if(fbCount)fbCount.textContent='0/500';
+        rating=0;paintStars(0);rtxt.textContent='';
+      }catch(err){
+        fbStatus.style.color='var(--c3)';fbStatus.textContent='Something went wrong — please try again.';
+        console.error('Supabase insert failed:',err);
+      }
+    }else{
+      fbStatus.style.color='var(--c5)';fbStatus.textContent='Thank you! Opening your email app... ✅';
+      const stars='★'.repeat(rating)+'☆'.repeat(5-rating);
+      window.location.href='mailto:honeychauhan357@gmail.com?subject=Client Feedback ('+rating+'/5)&body=Name: '+encodeURIComponent(n)+'%0ACompany/Role: '+encodeURIComponent(r)+'%0ARating: '+encodeURIComponent(stars)+'%0A%0AFeedback:%0A'+encodeURIComponent(m);
+    }
+    fbBtn.disabled=false;fbBtn.textContent='Send Feedback ⭐';
+    setTimeout(()=>{fbStatus.textContent=''},6000);
   });
 })();
 </script>
