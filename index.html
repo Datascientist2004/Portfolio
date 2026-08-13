@@ -3,6 +3,9 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+<meta http-equiv="Pragma" content="no-cache"/>
+<meta http-equiv="Expires" content="0"/>
 <title>Honey Chauhan — Data Into Decisions | BI, ML & Full-Stack Developer</title>
 <meta name="description" content="Honey Chauhan — Data Analyst, ML Engineer, Full-Stack Developer & UI/UX Designer. Power BI dashboards, deep learning models, React/AI apps & chatbots — including FitFuel AI Guru, a shipped AI fitness app. 11 GitHub projects, 3 IBM certs. Get an instant quote."/>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
@@ -153,6 +156,7 @@ h2.sh{font-family:var(--fd);font-size:clamp(1.9rem,3.8vw,2.9rem);font-weight:800
 .svc.g4::before{background:radial-gradient(circle,rgba(245,158,11,.13),transparent 70%)}
 .svc.g5::before{background:radial-gradient(circle,rgba(16,185,129,.13),transparent 70%)}
 .svc.g6::before{background:radial-gradient(circle,rgba(99,102,241,.13),transparent 70%)}
+.svc.g7::before{background:radial-gradient(circle,rgba(139,92,246,.16),transparent 70%)}
 .svc:hover::before{opacity:1}
 .sv-em{font-size:2rem;margin-bottom:15px;display:block;position:relative;z-index:1;transition:transform .4s cubic-bezier(.2,.9,.25,1)}
 .svc:hover .sv-em{transform:translateZ(30px) rotate(-8deg) scale(1.12)}
@@ -166,7 +170,7 @@ h2.sh{font-family:var(--fd);font-size:clamp(1.9rem,3.8vw,2.9rem);font-weight:800
 .promo-code{font-family:var(--fm);background:rgba(245,158,11,.22);color:var(--c4);padding:3px 10px;border-radius:6px;font-weight:700;letter-spacing:.6px}
 @keyframes promoPulse{0%,100%{box-shadow:0 0 0 rgba(245,158,11,0)}50%{box-shadow:0 0 22px rgba(245,158,11,.25)}}
 @media(max-width:640px){.promo-banner{font-size:.76rem;padding:10px 16px;flex-wrap:wrap}}
-.p1{color:var(--c1)}.p2{color:var(--c2)}.p3{color:var(--c3)}.p4{color:var(--c4)}.p5{color:var(--c5)}
+.p1{color:var(--c1)}.p2{color:var(--c2)}.p3{color:var(--c3)}.p4{color:var(--c4)}.p5{color:var(--c5)}.p6{color:#8B5CF6}
 .sv-tags{display:flex;flex-wrap:wrap;gap:4px;margin-top:10px;position:relative;z-index:1}
 .tg{font-family:var(--fm);font-size:.66rem;padding:2px 7px;border-radius:3px;background:rgba(99,102,241,.1);color:var(--c1);border:1px solid rgba(99,102,241,.18)}
 
@@ -296,6 +300,7 @@ h2.sh{font-family:var(--fd);font-size:clamp(1.9rem,3.8vw,2.9rem);font-weight:800
 .fi,.fta{width:100%;background:rgba(99,102,241,.05);border:1px solid var(--brd);border-radius:8px;padding:12px 14px;color:var(--txt);font-family:var(--fb);font-size:.86rem;outline:none;transition:all .2s}
 .fi:focus,.fta:focus{border-color:var(--c1);box-shadow:0 0 0 3px rgba(99,102,241,.12)}
 .fta{height:130px;resize:vertical}::placeholder{color:var(--mut)}
+.hpot{position:absolute!important;left:-9999px!important;top:-9999px!important;width:1px!important;height:1px!important;opacity:0!important;pointer-events:none}
 .fsub{position:relative;overflow:hidden;background:linear-gradient(135deg,var(--c1),#8183F4);color:#fff;border:none;padding:13px;border-radius:8px;font-family:var(--fd);font-weight:700;font-size:.92rem;cursor:pointer;transition:all .2s}
 .fsub:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(99,102,241,.5)}
 
@@ -449,6 +454,16 @@ h2.sh{font-family:var(--fd);font-size:clamp(1.9rem,3.8vw,2.9rem);font-weight:800
 .pay-amount-row input,.pay-note-input{background:rgba(255,255,255,.04);border:1.5px solid var(--brd);border-radius:10px;padding:13px 16px;color:var(--txt);font-size:.95rem;font-family:inherit;width:100%}
 .pay-amount-row input:focus,.pay-note-input:focus{outline:none;border-color:var(--c5)}
 .pay-note-input{margin-bottom:26px}
+.pay-code-msg{font-size:.76rem;font-family:var(--fm);margin:-14px 0 20px;min-height:16px;transition:color .2s}
+.pay-code-msg.valid{color:var(--c5)}
+.pay-code-msg.invalid{color:var(--c3)}
+.pay-code-msg.hint{color:var(--mut)}
+.pay-summary{background:rgba(255,255,255,.03);border:1px solid var(--brd);border-radius:12px;padding:16px 18px;margin-bottom:22px;display:none}
+.pay-summary.show{display:block}
+.pay-sum-row{display:flex;justify-content:space-between;align-items:center;font-size:.82rem;color:var(--mut);padding:5px 0}
+.pay-sum-row.disc{display:none;color:var(--c5)}
+.pay-sum-row.disc.show{display:flex}
+.pay-sum-row.total{border-top:1px solid var(--brd);margin-top:6px;padding-top:10px;font-size:1rem;font-weight:700;color:var(--txt)}
 .pay-qr-wrap{text-align:center;background:#fff;border-radius:16px;padding:18px;margin-bottom:22px;width:fit-content;margin-left:auto;margin-right:auto}
 .pay-qr-wrap img{width:210px;height:210px;display:block}
 .pay-qr-hint{font-family:var(--fm);font-size:.68rem;color:#374151;margin-top:8px}
@@ -578,9 +593,9 @@ footer{border-top:1px solid var(--brd);padding:26px 5%;display:flex;align-items:
       </div>
     </div>
     <div class="hero-right">
-      <div class="hc rv" data-glow><div class="hct"><span class="hci">📊</span><div class="hcn">BI Dashboards</div></div><div class="hcd">Power BI & Tableau dashboards — real-world data, live insights, interactive filters.</div><span class="hcb">From ₹1,200</span></div>
-      <div class="hc rv d2" data-glow><div class="hct"><span class="hci">🤖</span><div class="hcn">ML & Deep Learning</div></div><div class="hcd">RFM segmentation, diabetes detection (MLP), music recommendations — Python ML models on your data.</div><span class="hcb">From ₹3,500</span></div>
-      <div class="hc rv d4" data-glow><div class="hct"><span class="hci">🌐</span><div class="hcn">Full Stack + UI/UX</div></div><div class="hcd">React + Node.js apps with Figma-designed interfaces — from idea to deployed product.</div><span class="hcb">From ₹5,000</span></div>
+      <div class="hc rv" data-glow><div class="hct"><span class="hci">📊</span><div class="hcn">BI Dashboards</div></div><div class="hcd">Power BI & Tableau dashboards — real-world data, live insights, interactive filters.</div><span class="hcb">From ₹14,800</span></div>
+      <div class="hc rv d2" data-glow><div class="hct"><span class="hci">🤖</span><div class="hcn">ML & Deep Learning</div></div><div class="hcd">RFM segmentation, diabetes detection (MLP), music recommendations — Python ML models on your data.</div><span class="hcb">From ₹27,200</span></div>
+      <div class="hc rv d4" data-glow><div class="hct"><span class="hci">🌐</span><div class="hcn">Full Stack + UI/UX</div></div><div class="hcd">React + Node.js apps with Figma-designed interfaces — from idea to deployed product.</div><span class="hcb">From ₹22,400</span></div>
     </div>
   </div>
   <div class="scroll-hint"><span>scroll</span><div class="scrl"></div></div>
@@ -605,14 +620,15 @@ footer{border-top:1px solid var(--brd);padding:26px 5%;display:flex;align-items:
     <div class="ey rv">// What I Offer</div>
     <h2 class="sh rv wtitle" data-split>Productized services. Fixed pricing. No surprises.</h2>
     <p class="sd rv">Helping startups &amp; businesses build custom BI dashboards, automated pipelines, and predictive ML models — packaged, not hourly. Priced to beat typical agency &amp; freelancer rates.</p>
-    <div class="promo-banner rv">🔥 <strong>Limited-Time Offer:</strong> Use code <span class="promo-code">HERO20</span> for a flat 20% off any package below.</div>
+    <div class="promo-banner rv">🇮🇳 <strong>Independence Day Discount:</strong> Use code <span class="promo-code">INDEPENDENCE20</span> for a flat 20% off any package below.</div>
     <div class="sv-grid">
-      <div class="svc g1 rv" data-tilt data-glare><span class="sv-em">📊</span><div class="sv-nm">Executive BI &amp; Interactive Dashboards</div><div class="sv-dc">Transform raw Excel / SQL data into real-time interactive dashboards using Power BI or Tableau. Includes metric calculation, visual filters, auto-refresh pipelines, and executive summary views.</div><div class="sv-pr p1"><span class="pr-old">₹12,000 – ₹25,000</span>₹9,600 – ₹20,000<span class="pr-badge">20% OFF · HERO20</span></div><div class="sv-tags"><span class="tg">Power BI</span><span class="tg">Tableau</span><span class="tg">DAX</span><span class="tg">SQL</span></div></div>
-      <div class="svc g3 rv d2" data-tilt data-glare><span class="sv-em">🤖</span><div class="sv-nm">Predictive Analytics &amp; ML Integration</div><div class="sv-dc">Custom Machine Learning models — customer churn, sales forecasting, lead scoring — built with Python &amp; Scikit-learn on your real business data, with clean documentation.</div><div class="sv-pr p3"><span class="pr-old">₹22,000 – ₹42,000</span>₹17,600 – ₹33,600<span class="pr-badge">20% OFF · HERO20</span></div><div class="sv-tags"><span class="tg">Python</span><span class="tg">Scikit-learn</span><span class="tg">Deep Learning</span></div></div>
-      <div class="svc g2 rv d4" data-tilt data-glare><span class="sv-em">⚡</span><div class="sv-nm">Web Scraping &amp; Data Extraction</div><div class="sv-dc">Automated Python scrapers to extract structured market, pricing, or competitor data into clean CSV, JSON, or Google Sheets — refreshed on your schedule.</div><div class="sv-pr p2"><span class="pr-old">₹10,000 – ₹18,000</span>₹8,000 – ₹14,400<span class="pr-badge">20% OFF · HERO20</span></div><div class="sv-tags"><span class="tg">Python</span><span class="tg">Web Scraping</span><span class="tg">Automation</span></div></div>
-      <div class="svc g6 rv" data-tilt data-glare><span class="sv-em">🔄</span><div class="sv-nm">Monthly Data &amp; Analytics Retainer</div><div class="sv-dc">Dedicated ongoing support for dashboard maintenance, bug fixes, query optimization, and weekly custom analytics reporting for your business.</div><div class="sv-pr p1"><span class="pr-old">₹20,000 / month</span>₹16,000 / month<span class="pr-badge">20% OFF · HERO20</span></div><div class="sv-tags"><span class="tg">Retainer</span><span class="tg">Support</span><span class="tg">Reporting</span></div></div>
-      <div class="svc g4 rv d2" data-tilt data-glare><span class="sv-em">🌐</span><div class="sv-nm">Full Stack Web &amp; AI App Development</div><div class="sv-dc">React + Node.js apps, AI-powered products, admin panels — responsive, fast, production-ready. I designed &amp; shipped FitFuel AI Guru this way, end-to-end.</div><div class="sv-pr p4"><span class="pr-old">From ₹18,000</span>From ₹14,400<span class="pr-badge">20% OFF · HERO20</span></div><div class="sv-tags"><span class="tg">React</span><span class="tg">Node.js</span><span class="tg">AI Integration</span></div></div>
-      <div class="svc g5 rv d4" data-tilt data-glare><span class="sv-em">🎨</span><div class="sv-nm">UI/UX Design</div><div class="sv-dc">Figma wireframes, user flows, high-fidelity prototypes and design systems built for how real users think and interact.</div><div class="sv-pr p5"><span class="pr-old">From ₹7,000</span>From ₹5,600<span class="pr-badge">20% OFF · HERO20</span></div><div class="sv-tags"><span class="tg">Figma</span><span class="tg">UX Research</span><span class="tg">Prototyping</span></div></div>
+      <div class="svc g1 rv" data-tilt data-glare><span class="sv-em">📊</span><div class="sv-nm">Executive BI &amp; Interactive Dashboards</div><div class="sv-dc">Transform raw Excel / SQL data into real-time interactive dashboards using Power BI or Tableau. Includes metric calculation, visual filters, auto-refresh pipelines, and executive summary views.</div><div class="sv-pr p1"><span class="pr-old">₹18,500 – ₹38,500</span>₹14,800 – ₹30,800<span class="pr-badge">20% OFF · INDEPENDENCE20</span></div><div class="sv-tags"><span class="tg">Power BI</span><span class="tg">Tableau</span><span class="tg">DAX</span><span class="tg">SQL</span></div></div>
+      <div class="svc g3 rv d2" data-tilt data-glare><span class="sv-em">🤖</span><div class="sv-nm">Predictive Analytics &amp; ML Integration</div><div class="sv-dc">Custom Machine Learning models — customer churn, sales forecasting, lead scoring — built with Python &amp; Scikit-learn on your real business data, with clean documentation.</div><div class="sv-pr p3"><span class="pr-old">₹34,000 – ₹65,000</span>₹27,200 – ₹52,000<span class="pr-badge">20% OFF · INDEPENDENCE20</span></div><div class="sv-tags"><span class="tg">Python</span><span class="tg">Scikit-learn</span><span class="tg">Deep Learning</span></div></div>
+      <div class="svc g2 rv d4" data-tilt data-glare><span class="sv-em">⚡</span><div class="sv-nm">Web Scraping &amp; Data Extraction</div><div class="sv-dc">Automated Python scrapers to extract structured market, pricing, or competitor data into clean CSV, JSON, or Google Sheets — refreshed on your schedule.</div><div class="sv-pr p2"><span class="pr-old">₹15,500 – ₹28,000</span>₹12,400 – ₹22,400<span class="pr-badge">20% OFF · INDEPENDENCE20</span></div><div class="sv-tags"><span class="tg">Python</span><span class="tg">Web Scraping</span><span class="tg">Automation</span></div></div>
+      <div class="svc g6 rv" data-tilt data-glare><span class="sv-em">🔄</span><div class="sv-nm">Monthly Data &amp; Analytics Retainer</div><div class="sv-dc">Dedicated ongoing support for dashboard maintenance, bug fixes, query optimization, and weekly custom analytics reporting for your business.</div><div class="sv-pr p1"><span class="pr-old">₹31,000 / month</span>₹24,800 / month<span class="pr-badge">20% OFF · INDEPENDENCE20</span></div><div class="sv-tags"><span class="tg">Retainer</span><span class="tg">Support</span><span class="tg">Reporting</span></div></div>
+      <div class="svc g4 rv d2" data-tilt data-glare><span class="sv-em">🌐</span><div class="sv-nm">Full Stack Web &amp; AI App Development</div><div class="sv-dc">React + Node.js apps, AI-powered products, admin panels — responsive, fast, production-ready. I designed &amp; shipped FitFuel AI Guru this way, end-to-end.</div><div class="sv-pr p4"><span class="pr-old">From ₹28,000</span>From ₹22,400<span class="pr-badge">20% OFF · INDEPENDENCE20</span></div><div class="sv-tags"><span class="tg">React</span><span class="tg">Node.js</span><span class="tg">AI Integration</span></div></div>
+      <div class="svc g5 rv d4" data-tilt data-glare><span class="sv-em">🎨</span><div class="sv-nm">UI/UX Design</div><div class="sv-dc">Figma wireframes, user flows, high-fidelity prototypes and design systems built for how real users think and interact.</div><div class="sv-pr p5"><span class="pr-old">From ₹11,000</span>From ₹8,800<span class="pr-badge">20% OFF · INDEPENDENCE20</span></div><div class="sv-tags"><span class="tg">Figma</span><span class="tg">UX Research</span><span class="tg">Prototyping</span></div></div>
+      <div class="svc g7 rv" data-tilt data-glare><span class="sv-em">📱</span><div class="sv-nm">Mobile App Development</div><div class="sv-dc">Android &amp; iOS apps built with React Native — from idea to app-store-ready product, sharing code with your existing web stack where possible.</div><div class="sv-pr p6"><span class="pr-old">From ₹30,000</span>From ₹24,000<span class="pr-badge">20% OFF · INDEPENDENCE20</span></div><div class="sv-tags"><span class="tg">React Native</span><span class="tg">Android</span><span class="tg">iOS</span></div></div>
     </div>
   </div>
 </section>
@@ -623,22 +639,23 @@ footer{border-top:1px solid var(--brd);padding:26px 5%;display:flex;align-items:
   <div class="si">
     <div class="ey rv">// Instant Estimate</div>
     <h2 class="sh rv wtitle" data-split>Get your price in seconds.</h2>
-    <p class="sd rv">Tap what you need. See a real starting estimate instantly — HERO20 discount already applied.</p>
+    <p class="sd rv">Tap what you need. See a real starting estimate instantly — INDEPENDENCE20 discount already applied.</p>
     <div class="qc-wrap rv">
       <div class="qc-grid" id="qcGrid">
-        <label class="qc-chip" data-price="9600" data-name="BI Dashboard (Power BI/Tableau)"><input type="checkbox"/><span class="qc-check">✓</span><span class="qc-nm">📊 BI Dashboard</span><span class="qc-pr">₹9,600+</span></label>
-        <label class="qc-chip" data-price="4000" data-name="Excel & MIS Automation"><input type="checkbox"/><span class="qc-check">✓</span><span class="qc-nm">⚡ Excel Automation</span><span class="qc-pr">₹4,000+</span></label>
-        <label class="qc-chip" data-price="17600" data-name="ML & Deep Learning Model"><input type="checkbox"/><span class="qc-check">✓</span><span class="qc-nm">🤖 ML / Deep Learning</span><span class="qc-pr">₹17,600+</span></label>
-        <label class="qc-chip" data-price="14400" data-name="Full Stack Web App"><input type="checkbox"/><span class="qc-check">✓</span><span class="qc-nm">🌐 Full Stack Web App</span><span class="qc-pr">₹14,400+</span></label>
-        <label class="qc-chip" data-price="5600" data-name="UI/UX Design"><input type="checkbox"/><span class="qc-check">✓</span><span class="qc-nm">🎨 UI/UX Design</span><span class="qc-pr">₹5,600+</span></label>
-        <label class="qc-chip" data-price="6400" data-name="AI Chatbot"><input type="checkbox"/><span class="qc-check">✓</span><span class="qc-nm">🤖 AI Chatbot</span><span class="qc-pr">₹6,400+</span></label>
+        <label class="qc-chip" data-price="14800" data-name="BI Dashboard (Power BI/Tableau)"><input type="checkbox"/><span class="qc-check">✓</span><span class="qc-nm">📊 BI Dashboard</span><span class="qc-pr">₹14,800+</span></label>
+        <label class="qc-chip" data-price="6000" data-name="Excel & MIS Automation"><input type="checkbox"/><span class="qc-check">✓</span><span class="qc-nm">⚡ Excel Automation</span><span class="qc-pr">₹6,000+</span></label>
+        <label class="qc-chip" data-price="27200" data-name="ML & Deep Learning Model"><input type="checkbox"/><span class="qc-check">✓</span><span class="qc-nm">🤖 ML / Deep Learning</span><span class="qc-pr">₹27,200+</span></label>
+        <label class="qc-chip" data-price="22400" data-name="Full Stack Web App"><input type="checkbox"/><span class="qc-check">✓</span><span class="qc-nm">🌐 Full Stack Web App</span><span class="qc-pr">₹22,400+</span></label>
+        <label class="qc-chip" data-price="8800" data-name="UI/UX Design"><input type="checkbox"/><span class="qc-check">✓</span><span class="qc-nm">🎨 UI/UX Design</span><span class="qc-pr">₹8,800+</span></label>
+        <label class="qc-chip" data-price="10000" data-name="AI Chatbot"><input type="checkbox"/><span class="qc-check">✓</span><span class="qc-nm">🤖 AI Chatbot</span><span class="qc-pr">₹10,000+</span></label>
+        <label class="qc-chip" data-price="24000" data-name="Mobile App Development"><input type="checkbox"/><span class="qc-check">✓</span><span class="qc-nm">📱 Mobile App</span><span class="qc-pr">₹24,000+</span></label>
       </div>
       <div class="qc-summary">
         <div class="qc-total-lbl">Estimated Starting Total</div>
         <div class="qc-total" id="qcTotal">₹0</div>
         <div class="qc-count" id="qcCount">Select a service to begin</div>
         <button class="qc-btn" id="qcSend" disabled>Send This Quote Request →</button>
-        <div class="qc-note">*Starting prices with code HERO20 (20% off, limited time) — final fixed quote confirmed after a free discovery call.</div>
+        <div class="qc-note">*Starting prices with code INDEPENDENCE20 (20% off, limited time) — final fixed quote confirmed after a free discovery call.</div>
       </div>
     </div>
   </div>
@@ -684,7 +701,7 @@ footer{border-top:1px solid var(--brd);padding:26px 5%;display:flex;align-items:
           <div class="pnm">FitFuel AI Guru — AI Fitness &amp; Nutrition Coach</div>
           <div class="pdc"><strong>Problem:</strong> Most people quit fitness apps because generic meal plans don't adapt to their actual eating habits. <strong>Solution:</strong> A full-stack AI web app I designed, built and shipped end-to-end — not a notebook demo — giving users AI-generated meal plans, live macro/calorie tracking, and a conversational nutrition coach that adapts guidance to their goals.</div>
           <div class="pst"><span class="tg">React</span><span class="tg">TypeScript</span><span class="tg">Tailwind CSS</span><span class="tg">Supabase</span><span class="tg">AI / LLM</span><span class="tg">Lovable</span></div>
-          <a href="https://fitfuel-ai-guru.lovable.app/" target="_blank" class="plk pf-cta">Open Live App ↗</a>
+          <a href="https://fitfuel-ai-guru.lovable.app/" target="_blank" rel="noopener noreferrer" class="plk pf-cta">Open Live App ↗</a>
         </div>
       </div>
 
@@ -695,7 +712,7 @@ footer{border-top:1px solid var(--brd);padding:26px 5%;display:flex;align-items:
           <div class="pnm">Netflix Content Analysis Dashboard</div>
           <div class="pdc"><strong>Problem:</strong> Streaming platforms sit on huge content libraries but can't see, at a glance, what's driving engagement vs. what's underperforming. <strong>Solution:</strong> Built an interactive Power BI dashboard with DAX measures analyzing content distribution, release trends &amp; audience segmentation from real-world data — turning a messy content catalog into a 5-minute decision tool.</div>
           <div class="pst"><span class="tg">Power BI</span><span class="tg">Excel</span><span class="tg">DAX</span><span class="tg">Data Viz</span></div>
-          <a href="https://github.com/Datascientist2004/Netflix-Content-Analysis-PowerBI" target="_blank" class="plk">GitHub →</a>
+          <a href="https://github.com/Datascientist2004/Netflix-Content-Analysis-PowerBI" target="_blank" rel="noopener noreferrer" class="plk">GitHub →</a>
         </div>
       </div>
 
@@ -706,7 +723,7 @@ footer{border-top:1px solid var(--brd);padding:26px 5%;display:flex;align-items:
           <div class="pnm">Customer RFM Analysis & Segmentation</div>
           <div class="pdc"><strong>Problem:</strong> Businesses often can't tell their most valuable customers from ones about to churn. <strong>Solution:</strong> Built RFM (Recency, Frequency, Monetary) segmentation in Python that automatically ranks and flags high-value vs. at-risk customers — the same logic that powers real retention campaigns.</div>
           <div class="pst"><span class="tg">Python</span><span class="tg">Pandas</span><span class="tg">Matplotlib</span><span class="tg">ML</span></div>
-          <a href="https://github.com/Datascientist2004/Customer-RFM-Analysis" target="_blank" class="plk">GitHub →</a>
+          <a href="https://github.com/Datascientist2004/Customer-RFM-Analysis" target="_blank" rel="noopener noreferrer" class="plk">GitHub →</a>
         </div>
       </div>
 
@@ -717,7 +734,7 @@ footer{border-top:1px solid var(--brd);padding:26px 5%;display:flex;align-items:
           <div class="pnm">Diabetes Detection — Deep Learning (MLP)</div>
           <div class="pdc"><strong>Problem:</strong> Early health-risk screening is often manual, slow, and inconsistent. <strong>Solution:</strong> Built a Multilayer Perceptron (MLP) neural network in Python to predict diabetes risk directly from patient data — showing how deep learning can flag at-risk cases faster than manual review.</div>
           <div class="pst"><span class="tg">Deep Learning</span><span class="tg">Python</span><span class="tg">MLP</span><span class="tg">Healthcare AI</span></div>
-          <a href="https://github.com/Datascientist2004/Diabaties-detection" target="_blank" class="plk">GitHub →</a>
+          <a href="https://github.com/Datascientist2004/Diabaties-detection" target="_blank" rel="noopener noreferrer" class="plk">GitHub →</a>
         </div>
       </div>
 
@@ -728,7 +745,7 @@ footer{border-top:1px solid var(--brd);padding:26px 5%;display:flex;align-items:
           <div class="pnm">Music Recommendation System</div>
           <div class="pdc"><strong>Problem:</strong> Generic content feeds lose user attention fast — personalization drives retention. <strong>Solution:</strong> Built a collaborative/content-based filtering recommendation engine in Python that suggests songs based on real listening patterns and song features — the same approach behind Spotify-style discovery.</div>
           <div class="pst"><span class="tg">Python</span><span class="tg">ML</span><span class="tg">Recommendation</span><span class="tg">Scikit-learn</span></div>
-          <a href="https://github.com/Datascientist2004/Music-recommendation-system" target="_blank" class="plk">GitHub →</a>
+          <a href="https://github.com/Datascientist2004/Music-recommendation-system" target="_blank" rel="noopener noreferrer" class="plk">GitHub →</a>
         </div>
       </div>
 
@@ -739,7 +756,7 @@ footer{border-top:1px solid var(--brd);padding:26px 5%;display:flex;align-items:
           <div class="pnm">Inuit AI Chatbot — NLP Assignment</div>
           <div class="pdc"><strong>Problem:</strong> Support teams get buried in repetitive, first-line customer queries. <strong>Solution:</strong> Built an NLP-powered chatbot with intent recognition and dialogue management to automate first-contact conversations — a real-world customer automation use case.</div>
           <div class="pst"><span class="tg">NLP</span><span class="tg">Chatbot</span><span class="tg">AI</span><span class="tg">Python</span></div>
-          <a href="https://github.com/Datascientist2004/Inuit-Chatbot-Assignment." target="_blank" class="plk">GitHub →</a>
+          <a href="https://github.com/Datascientist2004/Inuit-Chatbot-Assignment." target="_blank" rel="noopener noreferrer" class="plk">GitHub →</a>
         </div>
       </div>
 
@@ -750,13 +767,13 @@ footer{border-top:1px solid var(--brd);padding:26px 5%;display:flex;align-items:
           <div class="pnm">Excel Business Analytics Project</div>
           <div class="pdc"><strong>Problem:</strong> Manual weekly Excel reporting eats hours that could go toward decisions, not data-wrangling. <strong>Solution:</strong> Built a Power Query + Pivot Table + dynamic chart system for MIS reporting — turning repeat manual work into a few-click refresh.</div>
           <div class="pst"><span class="tg">Excel</span><span class="tg">Power Query</span><span class="tg">Pivot</span><span class="tg">MIS</span></div>
-          <a href="https://github.com/Datascientist2004/Excel-project" target="_blank" class="plk">GitHub →</a>
+          <a href="https://github.com/Datascientist2004/Excel-project" target="_blank" rel="noopener noreferrer" class="plk">GitHub →</a>
         </div>
       </div>
 
     </div>
     <div class="view-all rv">
-      <a href="https://github.com/Datascientist2004" target="_blank" class="va-btn">View All 11 Repositories on GitHub 💻</a>
+      <a href="https://github.com/Datascientist2004" target="_blank" rel="noopener noreferrer" class="va-btn">View All 11 Repositories on GitHub 💻</a>
     </div>
   </div>
 </section>
@@ -889,7 +906,7 @@ footer{border-top:1px solid var(--brd);padding:26px 5%;display:flex;align-items:
       </div>
       <div class="faq-item rv">
         <button class="faq-q">How does pricing work?<span class="faq-ic">+</span></button>
-        <div class="faq-a"><p>You get one fixed quote after a free discovery call — no hourly billing and no surprise costs. Use the Instant Quote tool above for a ballpark estimate first. Use code <strong>HERO20</strong> for 20% off any package — limited-time offer.</p></div>
+        <div class="faq-a"><p>You get one fixed quote after a free discovery call — no hourly billing and no surprise costs. Use the Instant Quote tool above for a ballpark estimate first. Use code <strong>INDEPENDENCE20</strong> for 20% off any package — limited-time offer.</p></div>
       </div>
       <div class="faq-item rv">
         <button class="faq-q">What do you need from me to start?<span class="faq-ic">+</span></button>
@@ -912,8 +929,9 @@ footer{border-top:1px solid var(--brd);padding:26px 5%;display:flex;align-items:
     <p class="sd rv">Takes 30 seconds. Honest feedback helps future clients trust the work — and helps me improve.</p>
     <div class="fb-wrap rv">
       <div class="frow">
-        <div class="ffield"><input class="fi" type="text" placeholder="Your Name" id="fbn"/><span class="ferr" id="fbnErr"></span></div>
-        <input class="fi" type="text" placeholder="Company / Role (optional)" id="fbr"/>
+        <div class="ffield"><input class="fi" type="text" placeholder="Your Name" id="fbn" maxlength="100"/><span class="ferr" id="fbnErr"></span></div>
+        <input class="fi" type="text" placeholder="Company / Role (optional)" id="fbr" maxlength="100"/>
+        <input type="text" id="fbWebsite" name="website" class="hpot" tabindex="-1" autocomplete="off" aria-hidden="true"/>
       </div>
       <div class="fb-rating">
         <span class="fb-rlbl">Your rating</span>
@@ -950,23 +968,24 @@ footer{border-top:1px solid var(--brd);padding:26px 5%;display:flex;align-items:
             <a href="tel:+918595857226" class="cl"><span class="cli">📱</span><div>+91 8595857226<span class="cls">Call directly</span></div></a>
             <button class="cl-copy" data-copy="+918595857226" title="Copy number">📋</button>
           </div>
-          <a href="https://wa.me/918595857226?text=Hi%20Honey%2C%20I%20found%20your%20portfolio%20and%20I%27d%20like%20to%20discuss%20a%20project!" target="_blank" class="cl"><span class="cli">💬</span><div>Chat on WhatsApp<span class="cls">Fastest for quick questions</span></div></a>
-          <a href="https://linkedin.com/in/honey-chauhan-data-analyst" target="_blank" class="cl"><span class="cli">💼</span><div>linkedin.com/in/honey-chauhan-data-analyst<span class="cls">LinkedIn</span></div></a>
-          <a href="https://github.com/Datascientist2004" target="_blank" class="cl"><span class="cli">💻</span><div>github.com/Datascientist2004<span class="cls">11 public repos</span></div></a>
-          <a href="https://fitfuel-ai-guru.lovable.app/" target="_blank" class="cl"><span class="cli">🥗</span><div>fitfuel-ai-guru.lovable.app<span class="cls">Live AI product — try it yourself</span></div></a>
+          <a href="https://wa.me/918595857226?text=Hi%20Honey%2C%20I%20found%20your%20portfolio%20and%20I%27d%20like%20to%20discuss%20a%20project!" target="_blank" rel="noopener noreferrer" class="cl"><span class="cli">💬</span><div>Chat on WhatsApp<span class="cls">Fastest for quick questions</span></div></a>
+          <a href="https://linkedin.com/in/honey-chauhan-data-analyst" target="_blank" rel="noopener noreferrer" class="cl"><span class="cli">💼</span><div>linkedin.com/in/honey-chauhan-data-analyst<span class="cls">LinkedIn</span></div></a>
+          <a href="https://github.com/Datascientist2004" target="_blank" rel="noopener noreferrer" class="cl"><span class="cli">💻</span><div>github.com/Datascientist2004<span class="cls">11 public repos</span></div></a>
+          <a href="https://fitfuel-ai-guru.lovable.app/" target="_blank" rel="noopener noreferrer" class="cl"><span class="cli">🥗</span><div>fitfuel-ai-guru.lovable.app<span class="cls">Live AI product — try it yourself</span></div></a>
         </div>
       </div>
       <div class="rv d2">
         <div class="cform">
           <div class="frow">
-            <div class="ffield"><input class="fi" type="text" placeholder="Your Name" id="fn"/><span class="ferr" id="fnErr"></span></div>
-            <div class="ffield"><input class="fi" type="email" placeholder="Your Email" id="fe"/><span class="ferr" id="feErr"></span></div>
+            <div class="ffield"><input class="fi" type="text" placeholder="Your Name" id="fn" maxlength="100"/><span class="ferr" id="fnErr"></span></div>
+            <div class="ffield"><input class="fi" type="email" placeholder="Your Email" id="fe" maxlength="100"/><span class="ferr" id="feErr"></span></div>
           </div>
-          <input class="fi" type="text" placeholder="What do you need? (e.g. Power BI Dashboard, ML Model)" id="fs"/>
+          <input class="fi" type="text" placeholder="What do you need? (e.g. Power BI Dashboard, ML Model)" id="fs" maxlength="120"/>
           <div class="ffield">
             <textarea class="fta" placeholder="Tell me about your project — data available, problem to solve, deadline..." id="fm" maxlength="500"></textarea>
             <span class="fcount" id="fCount">0/500</span>
           </div>
+          <input type="text" id="fWebsite" name="website" class="hpot" tabindex="-1" autocomplete="off" aria-hidden="true"/>
           <button class="fsub" id="fSubmit" onclick="sendMsg(event)" data-ripple>Send Message ✉️</button>
           <div class="fstatus" id="fStatus"></div>
         </div>
@@ -988,10 +1007,21 @@ footer{border-top:1px solid var(--brd);padding:26px 5%;display:flex;align-items:
         <div class="pay-apps">Works with Google Pay, PhonePe, Paytm, BHIM, or any UPI-enabled app — scan the QR or tap Pay on mobile.</div>
 
         <div class="pay-amount-row">
-          <label for="payAmt">AMOUNT (₹)</label>
-          <input type="number" id="payAmt" placeholder="e.g. 10000" min="1"/>
+          <label for="payAmt">PROJECT AMOUNT (₹)</label>
+          <input type="number" id="payAmt" placeholder="e.g. 18500" min="1" max="10000000"/>
         </div>
-        <input type="text" id="payNote" class="pay-note-input" placeholder="Project reference (optional — e.g. 'BI Dashboard advance')"/>
+        <div class="pay-amount-row">
+          <label for="payCode">DISCOUNT CODE (OPTIONAL)</label>
+          <input type="text" id="payCode" placeholder="Have a code? Enter it here" maxlength="30"/>
+        </div>
+        <div class="pay-code-msg" id="payCodeMsg"></div>
+        <input type="text" id="payNote" class="pay-note-input" maxlength="60" placeholder="Project reference (optional — e.g. 'BI Dashboard advance')"/>
+
+        <div class="pay-summary" id="paySummary">
+          <div class="pay-sum-row"><span>Project amount</span><span id="paySumRegular">₹0</span></div>
+          <div class="pay-sum-row disc" id="paySumDiscRow"><span>Independence Day discount (20%)</span><span id="paySumDisc">−₹0</span></div>
+          <div class="pay-sum-row total"><span>You pay</span><span id="paySumTotal">₹0</span></div>
+        </div>
 
         <div class="pay-qr-wrap">
           <img id="payQR" src="" alt="UPI payment QR code" width="210" height="210"/>
@@ -1016,10 +1046,10 @@ footer{border-top:1px solid var(--brd);padding:26px 5%;display:flex;align-items:
 <footer>
   <div class="fl">Honey Chauhan</div>
   <div class="fc" id="footYear">© 2025 · Data · ML · Dev · Design · Delhi NCR · 11 GitHub Repos</div>
-  <div class="fls"><a href="#services">Services</a><a href="#projects">Projects</a><a href="#about">About</a><a href="#payment">Payment</a><a href="#contact">Contact</a><a href="https://github.com/Datascientist2004" target="_blank">GitHub</a></div>
+  <div class="fls"><a href="#services">Services</a><a href="#projects">Projects</a><a href="#about">About</a><a href="#payment">Payment</a><a href="#contact">Contact</a><a href="https://github.com/Datascientist2004" target="_blank" rel="noopener noreferrer">GitHub</a></div>
 </footer>
 
-<a id="waFab" href="https://wa.me/918595857226?text=Hi%20Honey%2C%20I%20found%20your%20portfolio%20and%20I%27d%20like%20to%20discuss%20a%20project!" target="_blank" title="Chat on WhatsApp">💬</a>
+<a id="waFab" href="https://wa.me/918595857226?text=Hi%20Honey%2C%20I%20found%20your%20portfolio%20and%20I%27d%20like%20to%20discuss%20a%20project!" target="_blank" rel="noopener noreferrer" title="Chat on WhatsApp">💬</a>
 
 <!-- PROJECT DETAIL MODAL -->
 <div id="pModalBg">
@@ -1030,7 +1060,7 @@ footer{border-top:1px solid var(--brd);padding:26px 5%;display:flex;align-items:
     <div class="pm-desc" id="pmDesc">Description</div>
     <div class="pm-tags" id="pmTags"></div>
     <div class="pm-actions">
-      <a href="#" target="_blank" class="pm-gh" id="pmGh">View on GitHub</a>
+      <a href="#" target="_blank" rel="noopener noreferrer" class="pm-gh" id="pmGh">View on GitHub</a>
       <button class="pm-cta" id="pmCta">Discuss This Project</button>
     </div>
   </div>
@@ -1103,31 +1133,86 @@ const dbClient=(SUPABASE_URL.startsWith('YOUR_')||typeof supabase==='undefined')
    1. Open any UPI app (Google Pay / PhonePe / Paytm) → Profile → your UPI ID
       looks like "yourname@oksbi", "9999999999@ybl", etc.
    2. Replace the placeholder below with your real UPI ID.
-   That's it — no account signup, no fees, works with every UPI app instantly. */
+   That's it — no account signup, no fees, works with every UPI app instantly.
+
+   DISCOUNT CODE: the 20% discount is now GATED — the client must type the
+   exact code below at payment time. No code (or a wrong code) = full price.
+   To change the code or discount %, edit DISCOUNT_CODE / DISCOUNT_PCT. */
 (function(){
   const VPA='honeychauhan357@okicici'; /* TODO: replace with your real UPI ID */
   const PAYEE='Honey Chauhan';
-  const amtEl=document.getElementById('payAmt'),noteEl=document.getElementById('payNote');
-  const qrEl=document.getElementById('payQR'),btnEl=document.getElementById('payBtn');
+  const DISCOUNT_CODE='INDEPENDENCE20';
+  const DISCOUNT_PCT=0.20;
+
+  const amtEl=document.getElementById('payAmt'),noteEl=document.getElementById('payNote'),codeEl=document.getElementById('payCode');
+  const qrEl=document.getElementById('payQR'),btnEl=document.getElementById('payBtn'),msgEl=document.getElementById('payCodeMsg');
+  const sumBox=document.getElementById('paySummary'),sumReg=document.getElementById('paySumRegular'),sumDiscRow=document.getElementById('paySumDiscRow'),sumDisc=document.getElementById('paySumDisc'),sumTotal=document.getElementById('paySumTotal');
   if(!amtEl||!qrEl||!btnEl)return;
-  function buildUpi(){
+
+  function inr(n){return '₹'+Number(n).toLocaleString('en-IN')}
+
+  function codeState(){
+    const raw=codeEl.value.trim();
+    if(!raw)return 'empty';
+    return raw.toUpperCase()===DISCOUNT_CODE ? 'valid' : 'invalid';
+  }
+
+  function finalAmount(regular){
+    return codeState()==='valid' ? Math.round(regular*(1-DISCOUNT_PCT)) : regular;
+  }
+
+  function buildUpi(amount){
     let p='pa='+encodeURIComponent(VPA)+'&pn='+encodeURIComponent(PAYEE)+'&cu=INR';
-    const amt=amtEl.value.trim();
-    if(amt&&parseFloat(amt)>0)p+='&am='+encodeURIComponent(amt);
+    if(amount>0)p+='&am='+encodeURIComponent(amount);
     const note=noteEl.value.trim();
     p+='&tn='+encodeURIComponent(note||'Project payment');
     return 'upi://pay?'+p;
   }
+
   function update(){
-    const upi=buildUpi();
+    const regular=parseFloat(amtEl.value)||0;
+    const state=codeState();
+
+    /* code feedback message */
+    if(state==='empty'){
+      msgEl.textContent=regular>0?'💡 Have a discount code? Enter it above to unlock 20% off.':'';
+      msgEl.className='pay-code-msg hint';
+    }else if(state==='valid'){
+      msgEl.textContent='✅ '+DISCOUNT_CODE+' applied — 20% off unlocked!';
+      msgEl.className='pay-code-msg valid';
+    }else{
+      msgEl.textContent='❌ Invalid code — full price applies. Check the code and try again.';
+      msgEl.className='pay-code-msg invalid';
+    }
+
+    /* price summary */
+    const amount=finalAmount(regular);
+    if(regular>0){
+      sumBox.classList.add('show');
+      sumReg.textContent=inr(regular);
+      if(state==='valid'){
+        sumDiscRow.classList.add('show');
+        sumDisc.textContent='−'+inr(regular-amount);
+      }else{
+        sumDiscRow.classList.remove('show');
+      }
+      sumTotal.textContent=inr(amount);
+    }else{
+      sumBox.classList.remove('show');
+    }
+
+    /* QR + pay button always reflect the FINAL enforced amount */
+    const upi=buildUpi(amount);
     qrEl.src='https://api.qrserver.com/v1/create-qr-code/?size=210x210&data='+encodeURIComponent(upi);
     btnEl.href=upi;
-    const amt=amtEl.value.trim();
-    btnEl.textContent=(amt&&parseFloat(amt)>0)?('📱 Pay ₹'+Number(amt).toLocaleString('en-IN')+' via UPI App'):'📱 Pay via UPI App';
+    btnEl.textContent=amount>0?('📱 Pay '+inr(amount)+' via UPI App'):'📱 Pay via UPI App';
   }
+
   amtEl.addEventListener('input',update);
   noteEl.addEventListener('input',update);
+  codeEl.addEventListener('input',update);
   update();
+
   const copyBtn=document.getElementById('payCopyVpa');
   if(copyBtn)copyBtn.addEventListener('click',()=>{
     navigator.clipboard.writeText(VPA).then(()=>{
@@ -1673,6 +1758,8 @@ if(feEl)feEl.addEventListener('blur',()=>{
 });
 async function sendMsg(e){
   if(e)e.preventDefault();
+  const hp=document.getElementById('fWebsite');
+  if(hp&&hp.value.trim()){console.warn('Spam submission blocked');return}
   const n=fnEl?fnEl.value.trim():'',em=feEl?feEl.value.trim():'',s=document.getElementById('fs')?document.getElementById('fs').value:'',m=fmEl?fmEl.value.trim():'';
   let ok=true;
   if(!n){fnEl.classList.add('invalid');document.getElementById('fnErr').textContent='Please enter your name';ok=false}
@@ -1717,6 +1804,8 @@ async function sendMsg(e){
   const fbn=document.getElementById('fbn'),fbr=document.getElementById('fbr'),fbm=document.getElementById('fbm'),fbCount=document.getElementById('fbCount'),fbStatus=document.getElementById('fbStatus'),fbBtn=document.getElementById('fbSubmit');
   if(fbm)fbm.addEventListener('input',()=>{fbCount.textContent=fbm.value.length+'/500'});
   fbBtn.addEventListener('click',async()=>{
+    const fbHp=document.getElementById('fbWebsite');
+    if(fbHp&&fbHp.value.trim()){console.warn('Spam submission blocked');return}
     const n=fbn.value.trim(),r=fbr.value.trim(),m=fbm.value.trim();
     let ok=true;
     const err=document.getElementById('fbnErr');
