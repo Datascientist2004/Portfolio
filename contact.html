@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Contact — Honey Chauhan</title>
+<meta name="description" content="Get in touch with Honey Chauhan for data, ML, and app development projects. Free discovery call, reply within 24 hours."/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+<link rel="stylesheet" href="style.css"/>
+<style>
+.contact-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:50px;align-items:start}
+@media(max-width:900px){.contact-grid{grid-template-columns:1fr}}
+.fb-stars{display:flex;gap:6px;margin-bottom:16px}
+.fb-star{font-size:1.6rem;color:var(--brd-strong);transition:color .15s}
+.fb-star.on{color:var(--c4)}
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="nav">
+    <a href="index.html" class="logo">
+      <span class="logo-mark"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="2" y="11" width="4" height="7" rx="1" fill="white" opacity=".9"/><rect x="8" y="7" width="4" height="11" rx="1" fill="white"/><rect x="14" y="2" width="4" height="16" rx="1" fill="white" opacity=".95"/></svg></span>
+      <span class="logo-word">Honey Chauhan<span>DATA &amp; AI CONSULTANT</span></span>
+    </a>
+    <ul class="navlinks" id="navLinks">
+      <li><a href="index.html" data-page>Home</a></li>
+      <li><a href="services.html" data-page>Services</a></li>
+      <li><a href="projects.html" data-page>Projects</a></li>
+      <li><a href="about.html" data-page>About</a></li>
+      <li><a href="contact.html" data-page>Contact</a></li>
+      <li><a href="services.html" class="nav-cta">Hire Me 🚀</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </nav>
+</header>
+<div id="mnavScrim"></div>
+
+<section class="page-hero">
+  <div class="wrap">
+    <div class="eyebrow rv">// LET'S BUILD TOGETHER</div>
+    <h1 class="rv d2">Ready to automate your data &amp; scale your business?</h1>
+    <p class="rv d3">Whether you need a custom dashboard built this week or want to discuss a full data project — let's connect. Reply within 24 hours, always.</p>
+  </div>
+</section>
+
+<section class="section tight">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div class="rv">
+        <h3 style="font-size:1.2rem;margin-bottom:10px">Reach me directly</h3>
+        <p style="color:var(--mut);font-size:.88rem;margin-bottom:22px">Open for dashboards, ML models, web/mobile apps, UI/UX, and monthly retainers. Delhi NCR based — hybrid/onsite welcome too.</p>
+
+        <a href="mailto:honeychauhan357@gmail.com" class="contact-link"><span class="cl-icon">📧</span><div><div class="cl-name">honeychauhan357@gmail.com</div><div class="cl-sub">Email — fastest reply</div></div></a>
+        <a href="tel:+918595857226" class="contact-link"><span class="cl-icon">📱</span><div><div class="cl-name">+91 8595857226</div><div class="cl-sub">Call directly</div></div></a>
+        <a href="https://wa.me/918595857226" target="_blank" rel="noopener noreferrer" class="contact-link"><span class="cl-icon">💬</span><div><div class="cl-name">Chat on WhatsApp</div><div class="cl-sub">Fastest for quick questions</div></div></a>
+        <a href="https://www.linkedin.com/in/honey-chauhan-data-analyst" target="_blank" rel="noopener noreferrer" class="contact-link"><span class="cl-icon">💼</span><div><div class="cl-name">LinkedIn</div><div class="cl-sub">Professional profile</div></div></a>
+        <a href="https://github.com/Datascientist2004" target="_blank" rel="noopener noreferrer" class="contact-link"><span class="cl-icon">💻</span><div><div class="cl-name">github.com/Datascientist2004</div><div class="cl-sub">11 public repos</div></div></a>
+        <a href="https://fitfuel-ai-guru.lovable.app/" target="_blank" rel="noopener noreferrer" class="contact-link"><span class="cl-icon">🥗</span><div><div class="cl-name">fitfuel-ai-guru.lovable.app</div><div class="cl-sub">Live AI product — try it yourself</div></div></a>
+      </div>
+
+      <form id="contactForm" class="rv d2">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+          <div class="form-field"><label>YOUR NAME</label><input type="text" id="cfName" maxlength="100" required/></div>
+          <div class="form-field"><label>YOUR EMAIL</label><input type="email" id="cfEmail" maxlength="100" required/></div>
+        </div>
+        <div class="form-field"><label>WHAT DO YOU NEED?</label><input type="text" id="cfService" maxlength="120" placeholder="e.g. Power BI Dashboard, Mobile App"/></div>
+        <div class="form-field">
+          <label>TELL ME ABOUT YOUR PROJECT</label>
+          <textarea id="cfMessage" rows="5" maxlength="500" placeholder="Data available, problem to solve, deadline..."></textarea>
+          <div style="text-align:right;font-size:.7rem;color:var(--mut);margin-top:4px"><span id="cfCount">0/500</span></div>
+        </div>
+        <input type="text" id="cfWebsite" name="website" class="hpot" tabindex="-1" autocomplete="off" aria-hidden="true"/>
+        <button type="submit" id="cfSubmit" class="btn btn-primary" style="width:100%;justify-content:center">Send Message ✉️</button>
+        <div id="cfStatus" style="margin-top:12px;font-size:.85rem;text-align:center;min-height:20px"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section alt">
+  <div class="wrap" style="max-width:800px">
+    <div class="eyebrow rv">// COMMON QUESTIONS</div>
+    <h2 class="h2 rv">Frequently asked questions.</h2>
+    <div style="margin-top:24px">
+      <div class="faq-item rv"><button class="faq-q">How fast can you deliver?<span class="faq-ic">+</span></button><div class="faq-a"><p>Most dashboards and small ML projects: 3-7 days. Full-stack apps: 2-4 weeks depending on scope. You'll get an exact date in your fixed quote.</p></div></div>
+      <div class="faq-item rv"><button class="faq-q">Do you work with international clients?<span class="faq-ic">+</span></button><div class="faq-a"><p>Yes — UPI for Indian clients, bank transfer/Wise/PayPal for international ones, arranged during our discovery call.</p></div></div>
+      <div class="faq-item rv"><button class="faq-q">How does pricing work?<span class="faq-ic">+</span></button><div class="faq-a"><p>Fixed quote after a free discovery call — no hourly billing. Use code <b>INDEPENDENCE20</b> at checkout on the Services page for 20% off any package — limited-time offer.</p></div></div>
+      <div class="faq-item rv"><button class="faq-q">What do you need from me to start?<span class="faq-ic">+</span></button><div class="faq-a"><p>Your data (Excel/CSV/database access), a rough goal, and 15 minutes for a discovery call — I'll handle the rest.</p></div></div>
+      <div class="faq-item rv"><button class="faq-q">Can you sign an NDA?<span class="faq-ic">+</span></button><div class="faq-a"><p>Absolutely — happy to sign one before you share any sensitive data.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FEEDBACK (real testimonials source) -->
+<section class="section" id="feedback">
+  <div class="wrap" style="max-width:640px">
+    <div class="eyebrow rv">// CLIENT FEEDBACK</div>
+    <h2 class="h2 rv">Worked with me? I'd love to hear it.</h2>
+    <p class="lede rv" style="max-width:100%">Takes 30 seconds. Every submission here is genuine — this is the only source for testimonials shown across this site.</p>
+    <form id="feedbackForm" class="card rv" style="padding:30px;margin-top:20px">
+      <div class="form-field"><label>YOUR NAME</label><input type="text" id="fbName" maxlength="100" required/></div>
+      <div class="form-field"><label>COMPANY / ROLE (OPTIONAL)</label><input type="text" id="fbRole" maxlength="100"/></div>
+      <div class="form-field"><label>YOUR RATING</label>
+        <div class="fb-stars"><span class="fb-star" data-v="1">★</span><span class="fb-star" data-v="2">★</span><span class="fb-star" data-v="3">★</span><span class="fb-star" data-v="4">★</span><span class="fb-star" data-v="5">★</span></div>
+      </div>
+      <div class="form-field"><label>WHAT WAS IT LIKE WORKING TOGETHER?</label><textarea id="fbMsg" rows="4" maxlength="500"></textarea></div>
+      <input type="text" id="fbWebsite" name="website" class="hpot" tabindex="-1" autocomplete="off" aria-hidden="true"/>
+      <button type="submit" id="fbSubmit" class="btn btn-primary" style="width:100%;justify-content:center">Send Feedback ⭐</button>
+      <div id="fbStatus" style="margin-top:12px;font-size:.85rem;text-align:center;min-height:20px"></div>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="logo" style="margin-bottom:14px">
+          <span class="logo-mark"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="2" y="11" width="4" height="7" rx="1" fill="white" opacity=".9"/><rect x="8" y="7" width="4" height="11" rx="1" fill="white"/><rect x="14" y="2" width="4" height="16" rx="1" fill="white" opacity=".95"/></svg></span>
+          <span class="logo-word" style="color:#fff">Honey Chauhan<span style="color:rgba(255,255,255,.5)">DATA &amp; AI CONSULTANT</span></span>
+        </div>
+        <p style="color:rgba(255,255,255,.6);font-size:.85rem;line-height:1.7;max-width:280px">Turning messy data into revenue-driving insights — BI dashboards, ML models, and full-stack AI apps, shipped end-to-end.</p>
+      </div>
+      <div><h4>Pages</h4><a href="index.html">Home</a><a href="services.html">Services</a><a href="projects.html">Projects</a><a href="about.html">About</a></div>
+      <div><h4>Connect</h4><a href="https://github.com/Datascientist2004" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://www.linkedin.com/in/honey-chauhan-data-analyst" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://fitfuel-ai-guru.lovable.app/" target="_blank" rel="noopener noreferrer">FitFuel AI Guru</a></div>
+      <div><h4>Contact</h4><a href="mailto:honeychauhan357@gmail.com">honeychauhan357@gmail.com</a><a href="tel:+918595857226">+91 8595857226</a><a href="contact.html">Contact Form →</a></div>
+    </div>
+    <div class="fbottom"><span>© 2026 Honey Chauhan · Delhi NCR · Remote</span><span>Built with real projects, not just claims.</span></div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

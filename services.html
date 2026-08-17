@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Services & Pricing — Honey Chauhan</title>
+<meta name="description" content="Productized data, ML, and app development services with fixed pricing and instant UPI payment. BI dashboards, ML integration, web scraping, full-stack apps, mobile apps, UI/UX."/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<header>
+  <nav class="nav">
+    <a href="index.html" class="logo">
+      <span class="logo-mark"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="2" y="11" width="4" height="7" rx="1" fill="white" opacity=".9"/><rect x="8" y="7" width="4" height="11" rx="1" fill="white"/><rect x="14" y="2" width="4" height="16" rx="1" fill="white" opacity=".95"/></svg></span>
+      <span class="logo-word">Honey Chauhan<span>DATA &amp; AI CONSULTANT</span></span>
+    </a>
+    <ul class="navlinks" id="navLinks">
+      <li><a href="index.html" data-page>Home</a></li>
+      <li><a href="services.html" data-page>Services</a></li>
+      <li><a href="projects.html" data-page>Projects</a></li>
+      <li><a href="about.html" data-page>About</a></li>
+      <li><a href="contact.html" data-page>Contact</a></li>
+      <li><a href="services.html" class="nav-cta">Hire Me 🚀</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </nav>
+</header>
+<div id="mnavScrim"></div>
+
+<section class="page-hero">
+  <div class="wrap">
+    <div class="eyebrow rv">// WHAT I OFFER</div>
+    <h1 class="rv d2">Productized services. Fixed pricing.<br>Pay right here.</h1>
+    <p class="rv d3">No hourly guesswork, no separate payment page — each service has its own instant UPI checkout with the Independence Day discount built in.</p>
+  </div>
+</section>
+
+<section class="section tight">
+  <div class="wrap">
+    <div style="background:linear-gradient(120deg,rgba(245,158,11,.10),rgba(236,72,153,.08));border:1.5px solid rgba(245,158,11,.3);border-radius:16px;padding:18px 26px;display:flex;align-items:center;gap:14px;margin-bottom:40px" class="rv">
+      <span style="font-size:1.4rem">🇮🇳</span>
+      <span style="font-size:.92rem;color:var(--ink-soft)"><b style="color:var(--c4)">Independence Day Discount:</b> Enter code <span class="mono" style="color:var(--c4);font-weight:700">INDEPENDENCE20</span> in any payment box below for a flat 20% off.</span>
+    </div>
+
+    <div class="svc-grid">
+
+      <!-- 1. BI DASHBOARDS -->
+      <div class="svc-card card rv">
+        <div class="svc-top">
+          <span class="svc-icon">📊</span>
+          <div><h3>Executive BI &amp; Interactive Dashboards</h3><p>Transform raw Excel/SQL data into real-time interactive dashboards using Power BI or Tableau. Includes DAX measures, filters, and executive summary views.</p></div>
+        </div>
+        <div class="svc-tags"><span class="tag">Power BI</span><span class="tag">Tableau</span><span class="tag">DAX</span><span class="tag">SQL</span></div>
+        <div class="svc-price-row"><div><span class="price-old">₹18,500–₹38,500</span><span class="price-now">₹14,800–₹30,800</span></div><span class="price-badge">20% OFF AVAILABLE</span></div>
+        <details class="pay-embed">
+          <summary>💳 Pay advance for this service</summary>
+          <div class="pay-widget" data-service-name="BI Dashboard advance">
+            <div class="pw-row"><label>PROJECT AMOUNT (₹)</label><input type="number" class="pw-amt" value="18500" min="1" max="10000000"/></div>
+            <div class="pw-row"><label>DISCOUNT CODE (OPTIONAL)</label><input type="text" class="pw-code" placeholder="Have a code?" maxlength="30"/></div>
+            <div class="pw-msg"></div>
+            <div class="pw-summary"><div class="pw-sum-row"><span>Project amount</span><span class="pw-sum-reg">₹0</span></div><div class="pw-sum-row pw-sum-disc-row"><span>Independence Day discount</span><span class="pw-sum-disc">−₹0</span></div><div class="pw-sum-row total"><span>You pay</span><span class="pw-sum-total">₹0</span></div></div>
+            <div class="pw-body">
+              <div class="pw-qr-box"><img class="pw-qr" alt="UPI QR"/></div>
+              <div class="pw-actions"><a href="#" class="pw-btn" target="_blank" rel="noopener">📱 Pay via UPI</a><div class="pw-vpa">UPI: <b>honeychauhan357@okicici</b><button type="button" class="pw-copy-vpa">Copy</button></div></div>
+            </div>
+          </div>
+        </details>
+      </div>
+
+      <!-- 2. ML INTEGRATION -->
+      <div class="svc-card card rv d2">
+        <div class="svc-top">
+          <span class="svc-icon">🤖</span>
+          <div><h3>Predictive Analytics &amp; ML Integration</h3><p>Custom ML models — customer churn, sales forecasting, lead scoring — built with Python &amp; Scikit-learn on your real business data.</p></div>
+        </div>
+        <div class="svc-tags"><span class="tag">Python</span><span class="tag">Scikit-learn</span><span class="tag">Deep Learning</span></div>
+        <div class="svc-price-row"><div><span class="price-old">₹34,000–₹65,000</span><span class="price-now">₹27,200–₹52,000</span></div><span class="price-badge">20% OFF AVAILABLE</span></div>
+        <details class="pay-embed">
+          <summary>💳 Pay advance for this service</summary>
+          <div class="pay-widget" data-service-name="ML Integration advance">
+            <div class="pw-row"><label>PROJECT AMOUNT (₹)</label><input type="number" class="pw-amt" value="34000" min="1" max="10000000"/></div>
+            <div class="pw-row"><label>DISCOUNT CODE (OPTIONAL)</label><input type="text" class="pw-code" placeholder="Have a code?" maxlength="30"/></div>
+            <div class="pw-msg"></div>
+            <div class="pw-summary"><div class="pw-sum-row"><span>Project amount</span><span class="pw-sum-reg">₹0</span></div><div class="pw-sum-row pw-sum-disc-row"><span>Independence Day discount</span><span class="pw-sum-disc">−₹0</span></div><div class="pw-sum-row total"><span>You pay</span><span class="pw-sum-total">₹0</span></div></div>
+            <div class="pw-body">
+              <div class="pw-qr-box"><img class="pw-qr" alt="UPI QR"/></div>
+              <div class="pw-actions"><a href="#" class="pw-btn" target="_blank" rel="noopener">📱 Pay via UPI</a><div class="pw-vpa">UPI: <b>honeychauhan357@okicici</b><button type="button" class="pw-copy-vpa">Copy</button></div></div>
+            </div>
+          </div>
+        </details>
+      </div>
+
+      <!-- 3. WEB SCRAPING -->
+      <div class="svc-card card rv">
+        <div class="svc-top">
+          <span class="svc-icon">⚡</span>
+          <div><h3>Web Scraping &amp; Data Extraction</h3><p>Automated Python scrapers to extract structured market, pricing, or competitor data into clean CSV, JSON, or Google Sheets.</p></div>
+        </div>
+        <div class="svc-tags"><span class="tag">Python</span><span class="tag">Web Scraping</span><span class="tag">Automation</span></div>
+        <div class="svc-price-row"><div><span class="price-old">₹15,500–₹28,000</span><span class="price-now">₹12,400–₹22,400</span></div><span class="price-badge">20% OFF AVAILABLE</span></div>
+        <details class="pay-embed">
+          <summary>💳 Pay advance for this service</summary>
+          <div class="pay-widget" data-service-name="Web Scraping advance">
+            <div class="pw-row"><label>PROJECT AMOUNT (₹)</label><input type="number" class="pw-amt" value="15500" min="1" max="10000000"/></div>
+            <div class="pw-row"><label>DISCOUNT CODE (OPTIONAL)</label><input type="text" class="pw-code" placeholder="Have a code?" maxlength="30"/></div>
+            <div class="pw-msg"></div>
+            <div class="pw-summary"><div class="pw-sum-row"><span>Project amount</span><span class="pw-sum-reg">₹0</span></div><div class="pw-sum-row pw-sum-disc-row"><span>Independence Day discount</span><span class="pw-sum-disc">−₹0</span></div><div class="pw-sum-row total"><span>You pay</span><span class="pw-sum-total">₹0</span></div></div>
+            <div class="pw-body">
+              <div class="pw-qr-box"><img class="pw-qr" alt="UPI QR"/></div>
+              <div class="pw-actions"><a href="#" class="pw-btn" target="_blank" rel="noopener">📱 Pay via UPI</a><div class="pw-vpa">UPI: <b>honeychauhan357@okicici</b><button type="button" class="pw-copy-vpa">Copy</button></div></div>
+            </div>
+          </div>
+        </details>
+      </div>
+
+      <!-- 4. MONTHLY RETAINER -->
+      <div class="svc-card card rv d2">
+        <div class="svc-top">
+          <span class="svc-icon">🔄</span>
+          <div><h3>Monthly Data &amp; Analytics Retainer</h3><p>Dedicated ongoing support for dashboard maintenance, bug fixes, query optimization, and weekly custom analytics reporting.</p></div>
+        </div>
+        <div class="svc-tags"><span class="tag">Retainer</span><span class="tag">Support</span><span class="tag">Reporting</span></div>
+        <div class="svc-price-row"><div><span class="price-old">₹31,000/mo</span><span class="price-now">₹24,800/mo</span></div><span class="price-badge">20% OFF AVAILABLE</span></div>
+        <details class="pay-embed">
+          <summary>💳 Pay this month's retainer</summary>
+          <div class="pay-widget" data-service-name="Monthly retainer">
+            <div class="pw-row"><label>PROJECT AMOUNT (₹)</label><input type="number" class="pw-amt" value="31000" min="1" max="10000000"/></div>
+            <div class="pw-row"><label>DISCOUNT CODE (OPTIONAL)</label><input type="text" class="pw-code" placeholder="Have a code?" maxlength="30"/></div>
+            <div class="pw-msg"></div>
+            <div class="pw-summary"><div class="pw-sum-row"><span>Project amount</span><span class="pw-sum-reg">₹0</span></div><div class="pw-sum-row pw-sum-disc-row"><span>Independence Day discount</span><span class="pw-sum-disc">−₹0</span></div><div class="pw-sum-row total"><span>You pay</span><span class="pw-sum-total">₹0</span></div></div>
+            <div class="pw-body">
+              <div class="pw-qr-box"><img class="pw-qr" alt="UPI QR"/></div>
+              <div class="pw-actions"><a href="#" class="pw-btn" target="_blank" rel="noopener">📱 Pay via UPI</a><div class="pw-vpa">UPI: <b>honeychauhan357@okicici</b><button type="button" class="pw-copy-vpa">Copy</button></div></div>
+            </div>
+          </div>
+        </details>
+      </div>
+
+      <!-- 5. FULL STACK -->
+      <div class="svc-card card rv">
+        <div class="svc-top">
+          <span class="svc-icon">🌐</span>
+          <div><h3>Full Stack Web &amp; AI App Development</h3><p>React + Node.js apps, AI-powered products, admin panels — responsive, fast, production-ready. Built &amp; shipped FitFuel AI Guru this way.</p></div>
+        </div>
+        <div class="svc-tags"><span class="tag">React</span><span class="tag">Node.js</span><span class="tag">AI Integration</span></div>
+        <div class="svc-price-row"><div><span class="price-old">From ₹28,000</span><span class="price-now">From ₹22,400</span></div><span class="price-badge">20% OFF AVAILABLE</span></div>
+        <details class="pay-embed">
+          <summary>💳 Pay advance for this service</summary>
+          <div class="pay-widget" data-service-name="Full Stack Web App advance">
+            <div class="pw-row"><label>PROJECT AMOUNT (₹)</label><input type="number" class="pw-amt" value="28000" min="1" max="10000000"/></div>
+            <div class="pw-row"><label>DISCOUNT CODE (OPTIONAL)</label><input type="text" class="pw-code" placeholder="Have a code?" maxlength="30"/></div>
+            <div class="pw-msg"></div>
+            <div class="pw-summary"><div class="pw-sum-row"><span>Project amount</span><span class="pw-sum-reg">₹0</span></div><div class="pw-sum-row pw-sum-disc-row"><span>Independence Day discount</span><span class="pw-sum-disc">−₹0</span></div><div class="pw-sum-row total"><span>You pay</span><span class="pw-sum-total">₹0</span></div></div>
+            <div class="pw-body">
+              <div class="pw-qr-box"><img class="pw-qr" alt="UPI QR"/></div>
+              <div class="pw-actions"><a href="#" class="pw-btn" target="_blank" rel="noopener">📱 Pay via UPI</a><div class="pw-vpa">UPI: <b>honeychauhan357@okicici</b><button type="button" class="pw-copy-vpa">Copy</button></div></div>
+            </div>
+          </div>
+        </details>
+      </div>
+
+      <!-- 6. UI/UX -->
+      <div class="svc-card card rv d2">
+        <div class="svc-top">
+          <span class="svc-icon">🎨</span>
+          <div><h3>UI/UX Design</h3><p>Figma wireframes, user flows, high-fidelity prototypes and design systems built for how real users think and interact.</p></div>
+        </div>
+        <div class="svc-tags"><span class="tag">Figma</span><span class="tag">UX Research</span><span class="tag">Prototyping</span></div>
+        <div class="svc-price-row"><div><span class="price-old">From ₹11,000</span><span class="price-now">From ₹8,800</span></div><span class="price-badge">20% OFF AVAILABLE</span></div>
+        <details class="pay-embed">
+          <summary>💳 Pay advance for this service</summary>
+          <div class="pay-widget" data-service-name="UI/UX Design advance">
+            <div class="pw-row"><label>PROJECT AMOUNT (₹)</label><input type="number" class="pw-amt" value="11000" min="1" max="10000000"/></div>
+            <div class="pw-row"><label>DISCOUNT CODE (OPTIONAL)</label><input type="text" class="pw-code" placeholder="Have a code?" maxlength="30"/></div>
+            <div class="pw-msg"></div>
+            <div class="pw-summary"><div class="pw-sum-row"><span>Project amount</span><span class="pw-sum-reg">₹0</span></div><div class="pw-sum-row pw-sum-disc-row"><span>Independence Day discount</span><span class="pw-sum-disc">−₹0</span></div><div class="pw-sum-row total"><span>You pay</span><span class="pw-sum-total">₹0</span></div></div>
+            <div class="pw-body">
+              <div class="pw-qr-box"><img class="pw-qr" alt="UPI QR"/></div>
+              <div class="pw-actions"><a href="#" class="pw-btn" target="_blank" rel="noopener">📱 Pay via UPI</a><div class="pw-vpa">UPI: <b>honeychauhan357@okicici</b><button type="button" class="pw-copy-vpa">Copy</button></div></div>
+            </div>
+          </div>
+        </details>
+      </div>
+
+      <!-- 7. MOBILE APP DEV -->
+      <div class="svc-card card rv" style="border-color:rgba(139,92,246,.3)">
+        <div class="svc-top">
+          <span class="svc-icon" style="background:rgba(139,92,246,.1)">📱</span>
+          <div><h3>Mobile App Development</h3><p>Android &amp; iOS apps built with React Native — from idea to app-store-ready product, sharing code with your existing web stack.</p></div>
+        </div>
+        <div class="svc-tags"><span class="tag">React Native</span><span class="tag">Android</span><span class="tag">iOS</span></div>
+        <div class="svc-price-row"><div><span class="price-old">From ₹30,000</span><span class="price-now">From ₹24,000</span></div><span class="price-badge">20% OFF AVAILABLE</span></div>
+        <details class="pay-embed">
+          <summary>💳 Pay advance for this service</summary>
+          <div class="pay-widget" data-service-name="Mobile App Development advance">
+            <div class="pw-row"><label>PROJECT AMOUNT (₹)</label><input type="number" class="pw-amt" value="30000" min="1" max="10000000"/></div>
+            <div class="pw-row"><label>DISCOUNT CODE (OPTIONAL)</label><input type="text" class="pw-code" placeholder="Have a code?" maxlength="30"/></div>
+            <div class="pw-msg"></div>
+            <div class="pw-summary"><div class="pw-sum-row"><span>Project amount</span><span class="pw-sum-reg">₹0</span></div><div class="pw-sum-row pw-sum-disc-row"><span>Independence Day discount</span><span class="pw-sum-disc">−₹0</span></div><div class="pw-sum-row total"><span>You pay</span><span class="pw-sum-total">₹0</span></div></div>
+            <div class="pw-body">
+              <div class="pw-qr-box"><img class="pw-qr" alt="UPI QR"/></div>
+              <div class="pw-actions"><a href="#" class="pw-btn" target="_blank" rel="noopener">📱 Pay via UPI</a><div class="pw-vpa">UPI: <b>honeychauhan357@okicici</b><button type="button" class="pw-copy-vpa">Copy</button></div></div>
+            </div>
+          </div>
+        </details>
+      </div>
+
+    </div>
+
+    <div style="text-align:center;margin-top:40px" class="rv">
+      <p style="color:var(--mut);font-size:.88rem;margin-bottom:14px">Not sure which service fits? Let's talk it through first — no payment needed.</p>
+      <a href="contact.html" class="btn btn-outline">Book a Free Discovery Call →</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="logo" style="margin-bottom:14px">
+          <span class="logo-mark"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="2" y="11" width="4" height="7" rx="1" fill="white" opacity=".9"/><rect x="8" y="7" width="4" height="11" rx="1" fill="white"/><rect x="14" y="2" width="4" height="16" rx="1" fill="white" opacity=".95"/></svg></span>
+          <span class="logo-word" style="color:#fff">Honey Chauhan<span style="color:rgba(255,255,255,.5)">DATA &amp; AI CONSULTANT</span></span>
+        </div>
+        <p style="color:rgba(255,255,255,.6);font-size:.85rem;line-height:1.7;max-width:280px">Turning messy data into revenue-driving insights — BI dashboards, ML models, and full-stack AI apps, shipped end-to-end.</p>
+      </div>
+      <div><h4>Pages</h4><a href="index.html">Home</a><a href="services.html">Services</a><a href="projects.html">Projects</a><a href="about.html">About</a></div>
+      <div><h4>Connect</h4><a href="https://github.com/Datascientist2004" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://www.linkedin.com/in/honey-chauhan-data-analyst" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://fitfuel-ai-guru.lovable.app/" target="_blank" rel="noopener noreferrer">FitFuel AI Guru</a></div>
+      <div><h4>Contact</h4><a href="mailto:honeychauhan357@gmail.com">honeychauhan357@gmail.com</a><a href="tel:+918595857226">+91 8595857226</a><a href="contact.html">Contact Form →</a></div>
+    </div>
+    <div class="fbottom"><span>© 2026 Honey Chauhan · Delhi NCR · Remote</span><span>Built with real projects, not just claims.</span></div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
