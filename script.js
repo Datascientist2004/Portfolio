@@ -3,7 +3,7 @@
    ========================================================= */
 
 /* ---------- CONFIG ---------- */
-const SUPABASE_URL='sb_publishable_YtUFao94h85Pw-I8Q3uTkQ_oK_8IR4M';
+const SUPABASE_URL='https://ikacxluybtrxpbdccrbj.supabase.co/rest/v1/';
 const SUPABASE_ANON_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImlrYWN4bHV5YnRyeHBiZGNjcmJqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODY5ODY3MjgsImV4cCI6MjEwMjU2MjcyOH0.iJddmf7KgadQPXoKilprSgG339j30FC7roO-8B5jPME';
 const dbClient=(SUPABASE_URL.startsWith('YOUR_')||typeof supabase==='undefined')?null:supabase.createClient(SUPABASE_URL,SUPABASE_ANON_KEY);
 
